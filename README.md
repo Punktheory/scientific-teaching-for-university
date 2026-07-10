@@ -12,6 +12,7 @@
 <p align="center">
   <a href="#-english-guide">English Guide</a> ·
   <a href="#-中文指南">中文指南</a> ·
+  <a href="#-version-selection--版本选择">Versions</a> ·
   <a href="#-repository-structure">Structure</a>
 </p>
 
@@ -21,9 +22,9 @@
 
 ## ✨ What Makes This Different?
 
-Most AI explanations fail because they teach from the perspective of someone who already understands the topic.
+Most AI explanations fail for a very specific reason: the model often explains from the perspective of someone who already understands the topic. It gives the correct conclusion, but it does not rebuild the mental path that a beginner needs in order to get there.
 
-This skill forces the AI to teach from the learner's starting point:
+This skill changes that teaching posture. It asks the AI to start from the learner's cognitive starting point, then build upward: context first, intuition next, examples before abstraction, formal definitions only after the learner has something to hold onto.
 
 <p align="center">
   <img src="./assets/readme/workflow.svg" alt="Teaching workflow" width="100%">
@@ -39,26 +40,21 @@ This skill forces the AI to teach from the learner's starting point:
 
 ## 🧠 Introduction
 
-`scientific-teaching-for-university` is an educational-psychology-based AI teaching skill for university students. It is designed for lecture notes, slides, formulas, abstract concepts, and hard technical courses.
+`scientific-teaching-for-university` is an educational-psychology-based AI teaching skill for university students. It is designed for lecture notes, slides, formulas, abstract concepts, and hard technical courses where normal AI explanations often become too compressed.
 
-The goal is simple: make AI teach like a good professor.
+The skill is built around one idea: good teaching is not the same as correct answering. A correct answer may still be useless if the learner cannot see where the idea comes from, why it matters, how it connects to the current lecture, or how each symbol in a formula works.
 
-That means the AI should:
+This skill makes the AI behave more like a patient professor:
 
-- give the big picture before details;
-- explain intuition before formal definitions;
-- use examples before abstraction becomes too heavy;
-- break math formulas down symbol by symbol;
-- explain why the instructor placed this slide, concept, example, or table here;
-- teach slide by slide instead of rushing through the whole deck.
+- It first explains where the current slide sits in the course.
+- It gives the learner a plain-language intuition before formal language.
+- It uses examples to make abstract concepts concrete.
+- It explains formulas symbol by symbol instead of treating them as magic.
+- It gives an evaluation of each concept: why it matters, when it is useful, what its limits are, and what similar ideas it is often confused with.
+- It explains why the instructor placed this content, example, table, or formula at this exact point in the lecture.
+- It moves one slide at a time, then stops, so the learner can digest and ask follow-up questions.
 
-## 🌍 Versions
-
-| Version | Folder | Best for |
-|---|---|---|
-| 🌏 Default bilingual | `scientific-teaching-for-university` | Chinese explanations with English technical terms |
-| 🇨🇳 Chinese version | `scientific-teaching-for-university-chinversion` | Full Chinese teaching for Chinese students |
-| 🇬🇧 English version | `scientific-teaching-for-university-englishversion` | Full English teaching for public / international users |
+The target is not shorter answers. The target is better learning.
 
 ## 🧩 Four Teaching Modes
 
@@ -66,99 +62,41 @@ That means the AI should:
   <img src="./assets/readme/modes.svg" alt="Four teaching modes" width="100%">
 </p>
 
-| Mode | When to use | Teaching style |
-|---|---|---|
-| Mode 1 Easy | Descriptive / memory-heavy slides | Sentence-by-sentence explanation + light examples |
-| Mode 2 Medium | Some harder concepts appear | Sentence-by-sentence explanation + higher-level concept teaching when needed |
-| Mode 3 Hard | Math, CS, abstract, or technical courses | Real teaching: context, intuition, definitions, examples, formula breakdown |
-| Mode 4 Deep Dive | Still confused after Mode 3 | Rebuild one hard concept from a more basic foundation |
+### 🟦 Mode 1: Easy
+
+Use this for descriptive, memory-heavy, or conceptually simple courses. The AI focuses on sentence-by-sentence explanation, light paraphrasing, and basic examples. It should still explain the slide's role in the lecture, but it should not over-expand simple material.
+
+Best for: introductory business slides, humanities notes, definitions, lightweight conceptual material.
+
+### 🟩 Mode 2: Medium
+
+Use this when the course is mostly understandable but some concepts need extra scaffolding. The AI still explains the slide sentence by sentence, but it pauses for harder concepts and gives a higher-level explanation, examples, and concept evaluation when needed.
+
+Best for: economics, statistics introductions, applied CS, social science methods, or any course where most slides are readable but some ideas are easy to misunderstand.
+
+### 🟨 Mode 3: Hard
+
+Use this for technical, mathematical, abstract, or concept-dense courses. The AI shifts from “explaining sentences” to real teaching. It should unpack the learning goal of the slide, identify difficult concepts, build intuition, introduce formal definitions, dissect formulas, and explain how the slide connects to the course structure.
+
+Best for: machine learning, algorithms, linear algebra, probability, optimization, operating systems, theory-heavy CS, engineering, and math-heavy lectures.
+
+### 🟥 Mode 4: Deep Dive
+
+Use this when Mode 3 is still too hard. Instead of repeating the same explanation, the AI must go one level more basic. It should identify the missing prerequisite, rebuild the idea from a simpler starting point, use a new analogy or smaller example, and then climb back toward the original concept step by step.
+
+Best for: “I still don't get it,” “start from scratch,” “make it more basic,” or “my foundation is not enough.”
 
 ## 🚀 Quick Start
-
-### 1. Choose a version
-
-Most Chinese-native students studying English lecture notes should start with:
-
-```text
-scientific-teaching-for-university
-```
-
-Use the full Chinese version if you want every explanation in Chinese:
-
-```text
-scientific-teaching-for-university-chinversion
-```
-
-Use the English version for public / international use:
-
-```text
-scientific-teaching-for-university-englishversion
-```
-
-### 2. Use with Codex
-
-Copy the skill folder into your Codex skills directory.
-
-Windows PowerShell:
-
-```powershell
-Copy-Item -Recurse .\scientific-teaching-for-university "$env:USERPROFILE\.codex\skills\scientific-teaching-for-university"
-```
-
-macOS / Linux:
-
-```bash
-cp -R ./scientific-teaching-for-university ~/.codex/skills/scientific-teaching-for-university
-```
-
-Then invoke it like this:
-
-```text
-Use scientific-teaching-for-university in hard mode to teach me this machine learning lecture.
-```
-
-### 3. Use with Claude Code / Other AI Tools
-
-If your tool supports custom skills, agents, memories, or reusable instructions:
-
-1. Add the chosen folder as a custom skill / instruction resource.
-2. Point the AI to that folder's `SKILL.md`.
-3. Ask it to follow the mode you want.
-
-Example:
-
-```text
-Use the instructions in scientific-teaching-for-university-englishversion/SKILL.md.
-Teach this lecture in hard mode, slide by slide.
-```
-
-If your tool does not support skills:
-
-1. Open the version's `SKILL.md`.
-2. Paste it into the AI as system / project / custom instructions.
-3. Upload your PPT or paste slides one by one.
-
-This works with Codex, Claude Code, ChatGPT Projects, Cursor, Windsurf, or any AI system that can follow long custom instructions.
-
-## 📚 Recommended Learning Workflow
-
-```text
-1. Enable the skill + choose difficulty
-2. Upload the whole lecture deck if possible
-3. Ask AI to understand the course structure first
-4. Paste one slide at a time
-5. Let AI explain context, intuition, examples, and formulas
-6. Say "more basic please" to trigger Mode 4
-7. Continue to the next slide
-```
-
-Best prompt:
 
 ```text
 Use scientific-teaching-for-university in hard mode.
 First read the whole lecture note and summarize the course structure.
 Then I will paste slides one by one. Teach each slide from a beginner's perspective.
 ```
+
+For Codex, copy the skill folder into `~/.codex/skills/` or `%USERPROFILE%\.codex\skills\`.
+
+For Claude Code, ChatGPT Projects, Cursor, Windsurf, or any AI tool with custom instructions, point the AI to the chosen `SKILL.md` and ask it to follow the mode you want.
 
 ## 🔥 Before / After Example
 
@@ -174,35 +112,28 @@ Gradient descent updates parameters in the opposite direction of the gradient:
 θ := θ - α∇J(θ)
 ```
 
-### ❌ Without this skill
-
-Gradient descent is an optimization algorithm that updates parameters by subtracting the learning rate times the gradient of the cost function. The gradient points in the direction of steepest ascent, so subtracting it minimizes the function.
-
-### ✅ With this skill
-
-Do not rush into the formula first. This slide is trying to answer one learning problem:
-
-> The model is not good enough yet. How do we adjust its parameters step by step so the loss becomes smaller?
-
-Intuitively, imagine the loss as the height of a mountain. You are standing on a slope and want to move downward. The gradient is like the steepest uphill direction under your feet. Since it points toward the fastest increase, we move in the opposite direction to decrease the loss.
-
-The formula is:
-
-\[
-\theta := \theta - \alpha \nabla J(\theta)
-\]
-
-Symbol by symbol:
-
-- \(\theta\): the model parameters, like adjustable knobs inside the model.
-- \(J(\theta)\): the loss / cost function, measuring how wrong the model currently is.
-- \(\nabla J(\theta)\): the gradient, telling us which direction makes the loss increase fastest.
-- \(\alpha\): the learning rate, controlling how large each update step is.
-- The minus sign: because the gradient points uphill, we subtract it to go downhill.
-
-Why did the instructor place this slide here?
-
-Because once a course defines the loss function, the natural next question is: how do we make that loss smaller? Gradient descent is the bridge between "defining the training objective" and "actually training the model."
+<table>
+  <tr>
+    <td width="50%" valign="top">
+      <h3>❌ Without this skill</h3>
+      <p>Gradient descent is an optimization algorithm that updates parameters by subtracting the learning rate times the gradient of the cost function.</p>
+      <p>The gradient points in the direction of steepest ascent, so subtracting it minimizes the function.</p>
+      <p><strong>Problem:</strong> correct, but compressed. It assumes the learner already knows what gradient, cost function, parameter update, and steepest ascent mean.</p>
+    </td>
+    <td width="50%" valign="top">
+      <h3>✅ With this skill</h3>
+      <p><strong>1. Start from the learning problem:</strong></p>
+      <blockquote>The model is not good enough yet. How do we adjust its parameters step by step so the loss becomes smaller?</blockquote>
+      <p><strong>2. Give intuition:</strong></p>
+      <p>Imagine the loss as the height of a mountain. The gradient is the steepest uphill direction. To reduce loss, we move the opposite way.</p>
+      <p><strong>3. Decode the formula:</strong></p>
+      <p><code>θ := θ - α∇J(θ)</code></p>
+      <p><code>θ</code> is the parameter, <code>α</code> is step size, <code>∇J(θ)</code> is the uphill direction, and the minus sign means “walk downhill.”</p>
+      <p><strong>4. Explain why this slide is here:</strong></p>
+      <p>After defining loss, the course naturally asks how to make that loss smaller. Gradient descent is the bridge from objective to training.</p>
+    </td>
+  </tr>
+</table>
 
 ## 🌟 Why It Matters
 
@@ -222,9 +153,9 @@ This skill packages that teaching method into reusable AI instructions, so more 
 
 ## ✨ 这个 Skill 有什么不一样？
 
-普通 AI 解释经常不好用，不是因为它不会这个知识点，而是因为它默认站在“已经懂了的人”的角度讲。
+普通 AI 解释经常不好用，不是因为它不会这个知识点，而是因为它默认站在“已经懂了的人”的角度讲。它可能给出正确答案，但没有重建一个初学者理解这个答案所需要的认知路径。
 
-这个 skill 强制 AI 从学习者的起点出发：
+这个 skill 改变的是 AI 的教学姿态：先站在学习者的起点，再一步步往上搭。先给上下文，再给直觉；先用例子落地，再引入抽象定义；公式不是直接甩出来，而是逐个符号拆开。
 
 <p align="center">
   <img src="./assets/readme/workflow.svg" alt="Teaching workflow" width="100%">
@@ -244,24 +175,19 @@ This skill packages that teaching method into reusable AI instructions, so more 
 
 这个项目就是为了解决这个问题。
 
-它把一套基于教育心理学和真实学习经验的教学方法做成 AI skill，让 AI 按一个真正会教学的教授那样讲：
+它把一套基于教育心理学和真实学习经验的教学方法做成 AI skill，让 AI 按一个真正会教学的教授那样讲。这里的重点不是让 AI “回答得更长”，而是让 AI 的解释符合学习者真正理解知识的路径。
 
-- 先讲大框架和上下文，再进入细节；
-- 难概念先给生活化直觉 / 类比，再给正式定义；
-- 每个概念配“概念评价 + 例子”；
-- 数学公式逐个符号拆开；
-- 解释“老师为什么把这页放在这里”；
-- 讲义一页一页讲，讲完一页停下来等你消化。
+它会要求 AI：
+
+- 先解释这页 slide 在整门课里的位置；
+- 先用人话建立直觉，再引入专业术语；
+- 用例子把抽象概念落到具体场景；
+- 遇到公式时先讲“这个公式想干什么”，再逐个符号拆；
+- 给每个概念补“概念评价”：它为什么重要、什么时候用、有什么局限、容易和什么混淆；
+- 解释“老师为什么把这个内容 / 例子 / 表格 / 公式放在这里”；
+- 一页一页讲，讲完一页停下来，让学习者能消化和追问。
 
 核心目的只有一个：通过这个 skill，让 AI **真正教会你**。
-
-## 🌍 版本选择
-
-| 版本 | 文件夹 | 适合谁 |
-|---|---|---|
-| 🌏 默认中英混合版 | `scientific-teaching-for-university` | 中文讲解 + 英文术语，适合学英文讲义的中文母语学生 |
-| 🇨🇳 全中文版 | `scientific-teaching-for-university-chinversion` | 希望所有讲解尽量中文化的学生 |
-| 🇬🇧 全英文版 | `scientific-teaching-for-university-englishversion` | 面向 public / international users |
 
 ## 🧩 四档教学模式
 
@@ -269,99 +195,41 @@ This skill packages that teaching method into reusable AI instructions, so more 
   <img src="./assets/readme/modes.svg" alt="Four teaching modes" width="100%">
 </p>
 
-| Mode | 中文 | 适合内容 | 讲法 |
-|---|---|---|---|
-| Mode 1 Easy | 简单内容 | 偏记忆、描述性的课 | 逐句讲解 + 轻量例子 |
-| Mode 2 Medium | 重点内容 | 开始出现有难度的概念 | 逐句讲解 + 少量高层概念解释 |
-| Mode 3 Hard | 困难内容 | 数学、计算机、抽象概念、技术课 | 真正教学：背景、直觉、定义、例子、公式拆解 |
-| Mode 4 Deep Dive | 追加深挖 | Mode 3 讲完还是不懂 | 从更基础处重新搭台阶，一步步推上去 |
+### 🟦 Mode 1：简单内容
 
-## 🚀 使用方法
+适合偏记忆、偏描述、概念本身不难的课程。AI 会以逐句讲解为主，帮助你准确理解 slide 每句话是什么意思，同时轻量补充上下文、例子和概念评价。这个模式不会过度深挖，避免把简单内容讲复杂。
 
-### 1. 选择版本
+适合：入门商科、人文社科描述性内容、定义型 slide、轻量概念课。
 
-大多数“中文母语 + 英文 lecture notes”的学生，推荐先用：
+### 🟩 Mode 2：重点内容
 
-```text
-scientific-teaching-for-university
-```
+适合大部分内容能看懂，但开始出现一些需要解释的重点概念。AI 仍然会逐句讲解，但遇到容易误解、容易卡住的地方，会额外做高层次解释、举例、补充概念评价。
 
-如果你希望讲解尽量全中文，用：
+适合：经济学、统计入门、应用计算机、社会科学方法课，或任何“多数能读，但有些地方容易不懂”的课。
 
-```text
-scientific-teaching-for-university-chinversion
-```
+### 🟨 Mode 3：困难内容
 
-如果你想给英文用户使用，用：
+适合数学、计算机、工程、理论课、抽象概念密集的课程。AI 会从“翻译句子”切换到“真正教学”：先讲这页想解决什么问题，再识别难概念，给直觉，给例子，补正式定义，拆公式，最后解释这页和课程前后内容的关系。
 
-```text
-scientific-teaching-for-university-englishversion
-```
+适合：机器学习、算法、线性代数、概率论、优化、操作系统、理论计算机、工程数学等硬核课程。
 
-### 2. 在 Codex 里使用
+### 🟥 Mode 4：追加深挖
 
-把你想用的 skill 文件夹复制到 Codex skills 目录。
+适合 Mode 3 讲完以后你还是不懂的情况。AI 不应该把原来的解释重复一遍，而是要承认原解释对你当前基础来说仍然太快，然后往更基础处退一步，找出缺失的前置知识，用更小的例子或新的类比重新搭台阶。
 
-Windows PowerShell：
+适合：“还是没懂”“从头讲”“再基础一点”“我基础没到”。
 
-```powershell
-Copy-Item -Recurse .\scientific-teaching-for-university "$env:USERPROFILE\.codex\skills\scientific-teaching-for-university"
-```
-
-macOS / Linux：
-
-```bash
-cp -R ./scientific-teaching-for-university ~/.codex/skills/scientific-teaching-for-university
-```
-
-然后这样调用：
-
-```text
-启用 scientific-teaching-for-university，困难模式，教我这门课。我会一页一页贴 slide。
-```
-
-### 3. 在 Claude Code / 其他 AI 工具里使用
-
-如果你的工具支持 custom skills、agents、memories 或 reusable instructions：
-
-1. 把你选择的文件夹加入自定义 skill / instructions。
-2. 让 AI 读取该文件夹里的 `SKILL.md`。
-3. 告诉 AI 使用哪个 mode。
-
-示例：
-
-```text
-请使用 scientific-teaching-for-university/SKILL.md 里的教学规则。
-用困难模式教我这门课，我会一页一页贴 slide。
-```
-
-如果你的工具不支持 skill：
-
-1. 打开对应版本的 `SKILL.md`。
-2. 把内容粘贴到 system / project / custom instructions。
-3. 上传 PPT，或一页一页粘贴 slide 内容。
-
-这套方法可以用于 Codex、Claude Code、ChatGPT Projects、Cursor、Windsurf，或者任何能遵循长指令的 AI 系统。
-
-## 📚 推荐学习流程
-
-```text
-1. 启用 skill + 选择难度
-2. 如果可以，先上传整份讲义 / PPT
-3. 让 AI 先理解课程整体结构
-4. 一页一页贴 slide
-5. 让 AI 解释上下文、直觉、例子和公式
-6. 如果还是不懂，说“再基础一点”，触发 Mode 4
-7. 继续下一页
-```
-
-最佳中文 prompt：
+## 🚀 快速使用
 
 ```text
 启用 scientific-teaching-for-university，困难模式。
 请先通读整份讲义，告诉我这门课的大框架。
 然后我会一页一页贴 slide，请你按初学者视角真正教会我。
 ```
+
+Codex：把 skill 文件夹复制到 `~/.codex/skills/` 或 `%USERPROFILE%\.codex\skills\`。
+
+Claude Code、ChatGPT Projects、Cursor、Windsurf 或其他 AI 工具：让 AI 读取你选择版本的 `SKILL.md`，并告诉它使用哪个 mode。
 
 ## 🔥 使用前后对比示例
 
@@ -377,35 +245,28 @@ Gradient descent updates parameters in the opposite direction of the gradient:
 θ := θ - α∇J(θ)
 ```
 
-### ❌ 不使用这个 skill
-
-Gradient descent is an optimization algorithm that updates parameters by subtracting the learning rate times the gradient of the cost function. The gradient points in the direction of steepest ascent, so subtracting it minimizes the function.
-
-### ✅ 使用这个 skill
-
-先不要急着看公式。这个 slide 想解决的问题是：
-
-> 模型现在表现不好，我们怎么一点点调整参数，让 loss 变小？
-
-直觉上，你可以把 loss 想象成一座山的高度。你站在山坡上，想往低处走。gradient 就像脚下坡度最陡的上坡方向；既然它指向“上坡最快”，那我们要让 loss 下降，就往反方向走。
-
-公式是：
-
-\[
-\theta := \theta - \alpha \nabla J(\theta)
-\]
-
-逐个符号拆：
-
-- \(\theta\)：模型参数，可以理解成模型里需要调整的旋钮。
-- \(J(\theta)\)：loss / cost function，用来衡量模型现在错得有多厉害。
-- \(\nabla J(\theta)\)：gradient，告诉我们“往哪里调会让 loss 上升最快”。
-- \(\alpha\)：learning rate，表示每一步走多大。
-- 减号：因为 gradient 指向上升方向，所以我们要反着走，才能下降。
-
-老师为什么把这页放这里？
-
-因为在学训练模型时，前面通常已经定义了 loss。下一步自然就是问：有了 loss 以后，怎么把它变小？Gradient descent 就是连接“定义目标”和“训练模型”的桥。
+<table>
+  <tr>
+    <td width="50%" valign="top">
+      <h3>❌ 不使用这个 skill</h3>
+      <p>Gradient descent is an optimization algorithm that updates parameters by subtracting the learning rate times the gradient of the cost function.</p>
+      <p>The gradient points in the direction of steepest ascent, so subtracting it minimizes the function.</p>
+      <p><strong>问题：</strong>这段话是对的，但太压缩了。它默认你已经知道 gradient、cost function、parameter update、steepest ascent 是什么。</p>
+    </td>
+    <td width="50%" valign="top">
+      <h3>✅ 使用这个 skill</h3>
+      <p><strong>1. 先从学习问题出发：</strong></p>
+      <blockquote>模型现在表现不好，我们怎么一点点调整参数，让 loss 变小？</blockquote>
+      <p><strong>2. 给直觉：</strong></p>
+      <p>把 loss 想象成一座山的高度。gradient 是最陡的上坡方向。我们想让 loss 下降，所以要往它的反方向走。</p>
+      <p><strong>3. 拆公式：</strong></p>
+      <p><code>θ := θ - α∇J(θ)</code></p>
+      <p><code>θ</code> 是参数，<code>α</code> 是每一步走多大，<code>∇J(θ)</code> 是上坡方向，减号表示“往下坡走”。</p>
+      <p><strong>4. 解释为什么这页放这里：</strong></p>
+      <p>课程前面定义了 loss，下一步自然要问怎么让 loss 变小。Gradient descent 就是从“定义目标”走向“训练模型”的桥。</p>
+    </td>
+  </tr>
+</table>
 
 ## 🌟 为什么这件事重要？
 
@@ -420,6 +281,16 @@ Gradient descent is an optimization algorithm that updates parameters by subtrac
 这个 skill 把这套教学方法封装成可复用的 AI 指令，让更多学生能用 AI 进行真正有效的学习，而不是停留在浅层问答。
 
 希望它能帮助更多大学生更快、更系统地用 AI 学会知识点。
+
+---
+
+## 🌍 Version Selection / 版本选择
+
+| Version | Folder | Best for |
+|---|---|---|
+| 🌏 Default bilingual / 默认中英混合版 | `scientific-teaching-for-university` | Chinese explanations with English technical terms. Best for Chinese-native students studying English lecture notes. |
+| 🇨🇳 Chinese version / 全中文版 | `scientific-teaching-for-university-chinversion` | Full Chinese teaching. Best when you want the explanation to be as Chinese-friendly as possible. |
+| 🇬🇧 English version / 全英文版 | `scientific-teaching-for-university-englishversion` | Full English teaching. Best for public / international users. |
 
 ---
 

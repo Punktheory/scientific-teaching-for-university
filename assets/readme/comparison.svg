@@ -1,26 +1,48 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="440" viewBox="0 0 1200 440" role="img" aria-labelledby="title desc">
-  <title id="title">Before and after example</title>
-  <desc id="desc">A comparison between a normal AI explanation and this teaching skill.</desc>
-  <rect width="1200" height="440" rx="24" fill="#F8FAFC"/>
-  <text x="600" y="44" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="30" font-weight="800" fill="#111827">Before vs After</text>
-  <g font-family="Segoe UI, Arial, sans-serif">
-    <g transform="translate(55 82)">
-      <rect width="515" height="300" rx="18" fill="#FFFFFF" stroke="#FCA5A5" stroke-width="3"/>
-      <text x="28" y="46" font-size="25" font-weight="800" fill="#991B1B">❌ Normal AI</text>
-      <text x="28" y="92" font-size="18" fill="#374151">“Gradient descent is an optimization algorithm...”</text>
-      <text x="28" y="136" font-size="18" fill="#374151">Starts with jargon</text>
-      <text x="28" y="176" font-size="18" fill="#374151">Assumes the learner already knows gradient</text>
-      <text x="28" y="216" font-size="18" fill="#374151">Formula is stated, not taught</text>
-      <text x="28" y="256" font-size="18" fill="#374151">No course context</text>
-    </g>
-    <g transform="translate(630 82)">
-      <rect width="515" height="300" rx="18" fill="#FFFFFF" stroke="#86EFAC" stroke-width="3"/>
-      <text x="28" y="46" font-size="25" font-weight="800" fill="#166534">✅ With this skill</text>
-      <text x="28" y="92" font-size="18" fill="#374151">Starts from the learning problem</text>
-      <text x="28" y="132" font-size="18" fill="#374151">Uses a hill-walking intuition</text>
-      <text x="28" y="172" font-size="18" fill="#374151">Explains θ, α, ∇J(θ), and the minus sign</text>
-      <text x="28" y="212" font-size="18" fill="#374151">Connects the slide to model training</text>
-      <text x="28" y="252" font-size="18" fill="#374151">Learner understands the idea, not just the words</text>
-    </g>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="520" viewBox="0 0 1200 520" role="img" aria-labelledby="title desc">
+  <title id="title">Before and after teaching example</title>
+  <desc id="desc">A polished comparison between a compressed AI answer and a scaffolded teaching explanation.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#F8FAFC"/>
+      <stop offset="1" stop-color="#E0F2FE"/>
+    </linearGradient>
+    <linearGradient id="good" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ECFDF5"/>
+      <stop offset="1" stop-color="#DBEAFE"/>
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="130%">
+      <feDropShadow dx="0" dy="12" stdDeviation="12" flood-color="#0F172A" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="520" rx="26" fill="url(#bg)"/>
+  <text x="600" y="46" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="31" font-weight="800" fill="#0F172A">Gradient Descent: Before vs After</text>
+  <text x="600" y="78" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="17" fill="#475569">Same slide. Different teaching quality.</text>
+
+  <g transform="translate(60 115)" filter="url(#shadow)">
+    <rect width="500" height="345" rx="20" fill="#FFFFFF" stroke="#FCA5A5" stroke-width="3"/>
+    <rect width="500" height="62" rx="20" fill="#FEF2F2"/>
+    <text x="28" y="40" font-family="Segoe UI, Arial, sans-serif" font-size="25" font-weight="800" fill="#991B1B">❌ Without this skill</text>
+    <text x="30" y="105" font-family="Segoe UI, Arial, sans-serif" font-size="17" fill="#334155">Gradient descent is an optimization</text>
+    <text x="30" y="132" font-family="Segoe UI, Arial, sans-serif" font-size="17" fill="#334155">algorithm that updates parameters by</text>
+    <text x="30" y="159" font-family="Segoe UI, Arial, sans-serif" font-size="17" fill="#334155">subtracting the learning rate times the</text>
+    <text x="30" y="186" font-family="Segoe UI, Arial, sans-serif" font-size="17" fill="#334155">gradient of the cost function.</text>
+    <line x1="30" y1="218" x2="470" y2="218" stroke="#FECACA" stroke-width="2"/>
+    <text x="30" y="252" font-family="Segoe UI, Arial, sans-serif" font-size="17" font-weight="700" fill="#991B1B">What is missing?</text>
+    <text x="30" y="282" font-family="Segoe UI, Arial, sans-serif" font-size="16" fill="#475569">No intuition. No symbol breakdown.</text>
+    <text x="30" y="309" font-family="Segoe UI, Arial, sans-serif" font-size="16" fill="#475569">No course context. Too compressed.</text>
+  </g>
+
+  <g transform="translate(640 115)" filter="url(#shadow)">
+    <rect width="500" height="345" rx="20" fill="url(#good)" stroke="#86EFAC" stroke-width="3"/>
+    <rect width="500" height="62" rx="20" fill="#D1FAE5"/>
+    <text x="28" y="40" font-family="Segoe UI, Arial, sans-serif" font-size="25" font-weight="800" fill="#166534">✅ With this skill</text>
+    <text x="30" y="101" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="800" fill="#065F46">1. Learning problem</text>
+    <text x="52" y="128" font-family="Segoe UI, Arial, sans-serif" font-size="16" fill="#334155">How do we adjust parameters so loss gets smaller?</text>
+    <text x="30" y="166" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="800" fill="#1D4ED8">2. Intuition</text>
+    <text x="52" y="193" font-family="Segoe UI, Arial, sans-serif" font-size="16" fill="#334155">Loss is mountain height; gradient points uphill.</text>
+    <text x="30" y="231" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="800" fill="#92400E">3. Formula decoding</text>
+    <text x="52" y="260" font-family="Consolas, monospace" font-size="18" fill="#0F172A">θ := θ - α∇J(θ)</text>
+    <text x="52" y="291" font-family="Segoe UI, Arial, sans-serif" font-size="16" fill="#334155">θ = parameter, α = step size, minus = downhill.</text>
+    <text x="30" y="329" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="800" fill="#7C2D12">4. Why this slide?</text>
   </g>
 </svg>
