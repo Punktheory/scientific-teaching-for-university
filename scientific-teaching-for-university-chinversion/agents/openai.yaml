@@ -1,0 +1,7 @@
+interface:
+  display_name: "讲义家教中文版"
+  short_description: "全中文大学讲义逐页教学助手"
+  default_prompt: "Use $scientific-teaching-for-university-chinversion in hard mode to teach me this course slide by slide."
+
+policy:
+  allow_implicit_invocation: true

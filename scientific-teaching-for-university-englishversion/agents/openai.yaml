@@ -1,0 +1,7 @@
+interface:
+  display_name: "Scientific Lecture Tutor EN"
+  short_description: "English slide-by-slide university lecture tutor"
+  default_prompt: "Use $scientific-teaching-for-university-englishversion in hard mode to teach me this course slide by slide."
+
+policy:
+  allow_implicit_invocation: true

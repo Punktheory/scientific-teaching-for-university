@@ -1,0 +1,7 @@
+interface:
+  display_name: "Scientific Lecture Tutor"
+  short_description: "讲义逐页讲解，中文教学配英文术语"
+  default_prompt: "Use $scientific-teaching-for-university in hard mode to teach me this course slide by slide."
+
+policy:
+  allow_implicit_invocation: true
