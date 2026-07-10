@@ -11,10 +11,11 @@
 
 <p align="center">
   <a href="#-english-guide">English Guide</a> ·
+  <a href="#-quick-start">English Quick Start</a> ·
   <a href="#-中文指南">中文指南</a> ·
-  <a href="#-quick-start">Quick Start</a> ·
+  <a href="#-快速使用">中文快速使用</a> ·
   <a href="#-version-selection--版本选择">Versions</a> ·
-  <a href="#-license">License</a>
+  <a href="#-license--协议">License</a>
 </p>
 
 ---
@@ -89,12 +90,6 @@ Best for: “I still don't get it,” “start from scratch,” “make it more 
 
 ## 🚀 Quick Start
 
-<p align="center">
-  <a href="#-english-guide">English Guide</a> ·
-  <a href="#-中文指南">中文指南</a> ·
-  <a href="#-version-selection--版本选择">Versions</a>
-</p>
-
 Download the repository:
 
 ```bash
@@ -114,9 +109,7 @@ Windows PowerShell:
 Copy-Item -Recurse .\scientific-teaching-for-university "$env:USERPROFILE\.codex\skills\scientific-teaching-for-university"
 ```
 
-For Claude Code or any AI tool with custom instructions, point it to the downloaded `scientific-teaching-for-university/SKILL.md`.
-
-For Codex or any tool that loads folders directly, install the skill folder first, then invoke the mode you want.
+For Claude Code or any AI tool with custom instructions, use the downloaded `scientific-teaching-for-university/SKILL.md` as the instruction file.
 
 Then start with:
 
@@ -235,12 +228,6 @@ Gradient descent updates parameters in the opposite direction of the gradient:
 
 ## 🚀 快速使用
 
-<p align="center">
-  <a href="#-english-guide">English Guide</a> ·
-  <a href="#-中文指南">中文指南</a> ·
-  <a href="#-version-selection--版本选择">Versions</a>
-</p>
-
 下载仓库：
 
 ```bash
@@ -261,8 +248,6 @@ Copy-Item -Recurse .\scientific-teaching-for-university "$env:USERPROFILE\.codex
 ```
 
 Claude Code 或其他支持 custom instructions 的 AI 工具：让 AI 使用下载后的 `scientific-teaching-for-university/SKILL.md` 作为指令文件。
-
-如果你的工具支持直接加载文件夹，就先安装 skill 文件夹，再按需要选择 mode 调用。
 
 然后这样开始：
 
@@ -309,17 +294,19 @@ Gradient descent updates parameters in the opposite direction of the gradient:
   </tr>
 </table>
 
-## Why It Matters
+## 🌟 Why It Matters / 为什么这件事重要？
 
-Good teaching is not dumping knowledge.
+Good teaching is not dumping knowledge. 好的教学不是把知识倒出来。
 
-Good teaching means building stairs:
+Good teaching means building stairs. 好的教学是在给学习者搭台阶：
 
 ```text
-context → intuition → example → definition → formula → evaluation → practice
+context / 上下文 → intuition / 直觉 → example / 例子 → definition / 定义 → formula / 公式 → evaluation / 评价 → practice / 练习
 ```
 
 This skill packages that teaching method into reusable AI instructions, so more students can use AI for serious learning instead of shallow Q&A.
+
+这个 skill 把这套教学方法封装成可复用的 AI 指令，让更多学生能用 AI 进行真正有效的学习，而不是停留在浅层问答。
 
 ---
 
@@ -333,9 +320,11 @@ This skill packages that teaching method into reusable AI instructions, so more 
 
 ---
 
-## License
+## 📄 License / 协议
 
 This repository is released under the MIT License.
+
+本仓库使用 MIT 协议开源。
 
 See [LICENSE](./LICENSE) for details.
 
