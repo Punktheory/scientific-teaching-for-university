@@ -12,9 +12,8 @@
 <p align="center">
   <a href="#-english-guide">English Guide</a> ·
   <a href="#-中文指南">中文指南</a> ·
-  <a href="#-quick-start">Quick Start</a> ·
-  <a href="#-version-selection--版本选择">Versions</a> ·
-  <a href="#-license">License</a>
+  <a href="#-quick-start--快速使用">Quick Start</a> ·
+  <a href="#-version-selection--版本选择">Versions</a>
 </p>
 
 ---
@@ -87,82 +86,6 @@ Use this when Mode 3 is still too hard. Instead of repeating the same explanatio
 
 Best for: “I still don't get it,” “start from scratch,” “make it more basic,” or “my foundation is not enough.”
 
-## 🚀 Quick Start
-
-<p align="center">
-  <a href="#-english-guide">English Guide</a> ·
-  <a href="#-中文指南">中文指南</a> ·
-  <a href="#-version-selection--版本选择">Versions</a>
-</p>
-
-Download the repository:
-
-```bash
-git clone https://github.com/Punktheory/scientific-teaching-for-university.git
-cd scientific-teaching-for-university
-```
-
-Install the default skill for Codex:
-
-```bash
-cp -R ./scientific-teaching-for-university ~/.codex/skills/scientific-teaching-for-university
-```
-
-Windows PowerShell:
-
-```powershell
-Copy-Item -Recurse .\scientific-teaching-for-university "$env:USERPROFILE\.codex\skills\scientific-teaching-for-university"
-```
-
-For Claude Code or any AI tool with custom instructions, point it to the downloaded `scientific-teaching-for-university/SKILL.md`.
-
-For Codex or any tool that loads folders directly, install the skill folder first, then invoke the mode you want.
-
-Then start with:
-
-```text
-Use scientific-teaching-for-university in hard mode.
-First read the whole lecture note and summarize the course structure.
-Then I will paste slides one by one. Teach each slide from a beginner's perspective.
-```
-
-## 🔥 Before / After Example
-
-<p align="center">
-  <img src="./assets/readme/comparison.svg" alt="Before and after teaching example" width="100%">
-</p>
-
-### Slide content
-
-```text
-Gradient descent updates parameters in the opposite direction of the gradient:
-
-θ := θ - α∇J(θ)
-```
-
-<table>
-  <tr>
-    <td width="50%" valign="top">
-      <h3>❌ Without this skill</h3>
-      <p>Gradient descent is an optimization algorithm that updates parameters by subtracting the learning rate times the gradient of the cost function.</p>
-      <p>The gradient points in the direction of steepest ascent, so subtracting it minimizes the function.</p>
-      <p><strong>Problem:</strong> correct, but compressed. It assumes the learner already knows what gradient, cost function, parameter update, and steepest ascent mean.</p>
-    </td>
-    <td width="50%" valign="top">
-      <h3>✅ With this skill</h3>
-      <p><strong>1. Start from the learning problem:</strong></p>
-      <blockquote>The model is not good enough yet. How do we adjust its parameters step by step so the loss becomes smaller?</blockquote>
-      <p><strong>2. Give intuition:</strong></p>
-      <p>Imagine the loss as the height of a mountain. The gradient is the steepest uphill direction. To reduce loss, we move the opposite way.</p>
-      <p><strong>3. Decode the formula:</strong></p>
-      <p><code>θ := θ - α∇J(θ)</code></p>
-      <p><code>θ</code> is the parameter, <code>α</code> is step size, <code>∇J(θ)</code> is the uphill direction, and the minus sign means “walk downhill.”</p>
-      <p><strong>4. Explain why this slide is here:</strong></p>
-      <p>After defining loss, the course naturally asks how to make that loss smaller. Gradient descent is the bridge from objective to training.</p>
-    </td>
-  </tr>
-</table>
-
 # 🇨🇳 中文指南
 
 ## ✨ 这个 Skill 有什么不一样？
@@ -233,7 +156,7 @@ Gradient descent updates parameters in the opposite direction of the gradient:
 
 适合：“还是没懂”“从头讲”“再基础一点”“我基础没到”。
 
-## 🚀 快速使用
+## 🚀 Quick Start / 快速使用
 
 <p align="center">
   <a href="#-english-guide">English Guide</a> ·
@@ -241,30 +164,37 @@ Gradient descent updates parameters in the opposite direction of the gradient:
   <a href="#-version-selection--版本选择">Versions</a>
 </p>
 
-下载仓库：
+Download the repository / 下载仓库:
 
 ```bash
 git clone https://github.com/Punktheory/scientific-teaching-for-university.git
 cd scientific-teaching-for-university
 ```
 
-在 Codex 中安装默认版本：
+Install for Codex / 在 Codex 中安装默认版本:
 
 ```bash
 cp -R ./scientific-teaching-for-university ~/.codex/skills/scientific-teaching-for-university
 ```
 
-Windows PowerShell：
+Windows PowerShell:
 
 ```powershell
 Copy-Item -Recurse .\scientific-teaching-for-university "$env:USERPROFILE\.codex\skills\scientific-teaching-for-university"
 ```
 
-Claude Code 或其他支持 custom instructions 的 AI 工具：让 AI 使用下载后的 `scientific-teaching-for-university/SKILL.md` 作为指令文件。
+Claude Code / other AI tools:
+Use the downloaded `scientific-teaching-for-university/SKILL.md` as the custom instruction file.
 
-如果你的工具支持直接加载文件夹，就先安装 skill 文件夹，再按需要选择 mode 调用。
+Start in English:
 
-然后这样开始：
+```text
+Use scientific-teaching-for-university in hard mode.
+First read the whole lecture note and summarize the course structure.
+Then I will paste slides one by one. Teach each slide from a beginner's perspective.
+```
+
+中文开始：
 
 ```text
 启用 scientific-teaching-for-university，困难模式。
@@ -272,42 +202,17 @@ Claude Code 或其他支持 custom instructions 的 AI 工具：让 AI 使用下
 然后我会一页一页贴 slide，请你按初学者视角真正教会我。
 ```
 
-## 🔥 使用前后对比示例
+## 🔥 Teaching Showcase
 
 <p align="center">
   <img src="./assets/readme/comparison.svg" alt="Before and after teaching example" width="100%">
 </p>
 
-### Slide 内容
+The same slide can produce two very different learning experiences:
 
-```text
-Gradient descent updates parameters in the opposite direction of the gradient:
-
-θ := θ - α∇J(θ)
-```
-
-<table>
-  <tr>
-    <td width="50%" valign="top">
-      <h3>❌ 不使用这个 skill</h3>
-      <p>Gradient descent is an optimization algorithm that updates parameters by subtracting the learning rate times the gradient of the cost function.</p>
-      <p>The gradient points in the direction of steepest ascent, so subtracting it minimizes the function.</p>
-      <p><strong>问题：</strong>这段话是对的，但太压缩了。它默认你已经知道 gradient、cost function、parameter update、steepest ascent 是什么。</p>
-    </td>
-    <td width="50%" valign="top">
-      <h3>✅ 使用这个 skill</h3>
-      <p><strong>1. 先从学习问题出发：</strong></p>
-      <blockquote>模型现在表现不好，我们怎么一点点调整参数，让 loss 变小？</blockquote>
-      <p><strong>2. 给直觉：</strong></p>
-      <p>把 loss 想象成一座山的高度。gradient 是最陡的上坡方向。我们想让 loss 下降，所以要往它的反方向走。</p>
-      <p><strong>3. 拆公式：</strong></p>
-      <p><code>θ := θ - α∇J(θ)</code></p>
-      <p><code>θ</code> 是参数，<code>α</code> 是每一步走多大，<code>∇J(θ)</code> 是上坡方向，减号表示“往下坡走”。</p>
-      <p><strong>4. 解释为什么这页放这里：</strong></p>
-      <p>课程前面定义了 loss，下一步自然要问怎么让 loss 变小。Gradient descent 就是从“定义目标”走向“训练模型”的桥。</p>
-    </td>
-  </tr>
-</table>
+| Slide | Before | After |
+|---|---|---|
+| `θ := θ - α∇J(θ)` | A compressed definition that assumes the learner already knows the technical terms. | A structured explanation: learning problem → intuition → formula decoding → course context. |
 
 ## Why It Matters
 
