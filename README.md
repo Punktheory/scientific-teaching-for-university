@@ -11,9 +11,11 @@
 
 <p align="center">
   <a href="#-english-guide">English Guide</a> ·
+  <a href="#-quick-start">English Quick Start</a> ·
   <a href="#-中文指南">中文指南</a> ·
+  <a href="#-快速使用">中文快速使用</a> ·
   <a href="#-version-selection--版本选择">Versions</a> ·
-  <a href="#-repository-structure">Structure</a>
+  <a href="#-license--协议">License</a>
 </p>
 
 ---
@@ -88,15 +90,34 @@ Best for: “I still don't get it,” “start from scratch,” “make it more 
 
 ## 🚀 Quick Start
 
+Download the repository:
+
+```bash
+git clone https://github.com/Punktheory/scientific-teaching-for-university.git
+cd scientific-teaching-for-university
+```
+
+Install the default skill for Codex:
+
+```bash
+cp -R ./scientific-teaching-for-university ~/.codex/skills/scientific-teaching-for-university
+```
+
+Windows PowerShell:
+
+```powershell
+Copy-Item -Recurse .\scientific-teaching-for-university "$env:USERPROFILE\.codex\skills\scientific-teaching-for-university"
+```
+
+For Claude Code or any AI tool with custom instructions, use the downloaded `scientific-teaching-for-university/SKILL.md` as the instruction file.
+
+Then start with:
+
 ```text
 Use scientific-teaching-for-university in hard mode.
 First read the whole lecture note and summarize the course structure.
 Then I will paste slides one by one. Teach each slide from a beginner's perspective.
 ```
-
-For Codex, copy the skill folder into `~/.codex/skills/` or `%USERPROFILE%\.codex\skills\`.
-
-For Claude Code, ChatGPT Projects, Cursor, Windsurf, or any AI tool with custom instructions, point the AI to the chosen `SKILL.md` and ask it to follow the mode you want.
 
 ## 🔥 Before / After Example
 
@@ -134,20 +155,6 @@ Gradient descent updates parameters in the opposite direction of the gradient:
     </td>
   </tr>
 </table>
-
-## 🌟 Why It Matters
-
-Good teaching is not dumping knowledge.
-
-Good teaching means building stairs:
-
-```text
-context → intuition → example → definition → formula → evaluation → practice
-```
-
-This skill packages that teaching method into reusable AI instructions, so more students can use AI for serious learning instead of shallow Q&A.
-
----
 
 # 🇨🇳 中文指南
 
@@ -221,15 +228,34 @@ This skill packages that teaching method into reusable AI instructions, so more 
 
 ## 🚀 快速使用
 
+下载仓库：
+
+```bash
+git clone https://github.com/Punktheory/scientific-teaching-for-university.git
+cd scientific-teaching-for-university
+```
+
+在 Codex 中安装默认版本：
+
+```bash
+cp -R ./scientific-teaching-for-university ~/.codex/skills/scientific-teaching-for-university
+```
+
+Windows PowerShell：
+
+```powershell
+Copy-Item -Recurse .\scientific-teaching-for-university "$env:USERPROFILE\.codex\skills\scientific-teaching-for-university"
+```
+
+Claude Code 或其他支持 custom instructions 的 AI 工具：让 AI 使用下载后的 `scientific-teaching-for-university/SKILL.md` 作为指令文件。
+
+然后这样开始：
+
 ```text
 启用 scientific-teaching-for-university，困难模式。
 请先通读整份讲义，告诉我这门课的大框架。
 然后我会一页一页贴 slide，请你按初学者视角真正教会我。
 ```
-
-Codex：把 skill 文件夹复制到 `~/.codex/skills/` 或 `%USERPROFILE%\.codex\skills\`。
-
-Claude Code、ChatGPT Projects、Cursor、Windsurf 或其他 AI 工具：让 AI 读取你选择版本的 `SKILL.md`，并告诉它使用哪个 mode。
 
 ## 🔥 使用前后对比示例
 
@@ -268,19 +294,19 @@ Gradient descent updates parameters in the opposite direction of the gradient:
   </tr>
 </table>
 
-## 🌟 为什么这件事重要？
+## 🌟 Why It Matters / 为什么这件事重要？
 
-好的教学不是把知识倒出来。
+Good teaching is not dumping knowledge. 好的教学不是把知识倒出来。
 
-好的教学是在给学习者搭台阶：
+Good teaching means building stairs. 好的教学是在给学习者搭台阶：
 
 ```text
-上下文 → 直觉 → 例子 → 定义 → 公式 → 评价 → 练习
+context / 上下文 → intuition / 直觉 → example / 例子 → definition / 定义 → formula / 公式 → evaluation / 评价 → practice / 练习
 ```
 
-这个 skill 把这套教学方法封装成可复用的 AI 指令，让更多学生能用 AI 进行真正有效的学习，而不是停留在浅层问答。
+This skill packages that teaching method into reusable AI instructions, so more students can use AI for serious learning instead of shallow Q&A.
 
-希望它能帮助更多大学生更快、更系统地用 AI 学会知识点。
+这个 skill 把这套教学方法封装成可复用的 AI 指令，让更多学生能用 AI 进行真正有效的学习，而不是停留在浅层问答。
 
 ---
 
@@ -294,6 +320,16 @@ Gradient descent updates parameters in the opposite direction of the gradient:
 
 ---
 
+## 📄 License / 协议
+
+This repository is released under the MIT License.
+
+本仓库使用 MIT 协议开源。
+
+See [LICENSE](./LICENSE) for details.
+
+---
+
 ## 🧩 Repository Structure
 
 ```text
@@ -303,6 +339,7 @@ Gradient descent updates parameters in the opposite direction of the gradient:
 │   ├── workflow.svg
 │   ├── modes.svg
 │   └── comparison.svg
+├── LICENSE
 ├── scientific-teaching-for-university/
 │   ├── SKILL.md
 │   ├── agents/openai.yaml
