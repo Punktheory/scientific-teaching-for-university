@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="440" viewBox="0 0 1200 440" role="img" aria-labelledby="title desc">
+  <title id="title">Before and after example</title>
+  <desc id="desc">A comparison between a normal AI explanation and this teaching skill.</desc>
+  <rect width="1200" height="440" rx="24" fill="#F8FAFC"/>
+  <text x="600" y="44" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="30" font-weight="800" fill="#111827">Before vs After</text>
+  <g font-family="Segoe UI, Arial, sans-serif">
+    <g transform="translate(55 82)">
+      <rect width="515" height="300" rx="18" fill="#FFFFFF" stroke="#FCA5A5" stroke-width="3"/>
+      <text x="28" y="46" font-size="25" font-weight="800" fill="#991B1B">❌ Normal AI</text>
+      <text x="28" y="92" font-size="18" fill="#374151">“Gradient descent is an optimization algorithm...”</text>
+      <text x="28" y="136" font-size="18" fill="#374151">Starts with jargon</text>
+      <text x="28" y="176" font-size="18" fill="#374151">Assumes the learner already knows gradient</text>
+      <text x="28" y="216" font-size="18" fill="#374151">Formula is stated, not taught</text>
+      <text x="28" y="256" font-size="18" fill="#374151">No course context</text>
+    </g>
+    <g transform="translate(630 82)">
+      <rect width="515" height="300" rx="18" fill="#FFFFFF" stroke="#86EFAC" stroke-width="3"/>
+      <text x="28" y="46" font-size="25" font-weight="800" fill="#166534">✅ With this skill</text>
+      <text x="28" y="92" font-size="18" fill="#374151">Starts from the learning problem</text>
+      <text x="28" y="132" font-size="18" fill="#374151">Uses a hill-walking intuition</text>
+      <text x="28" y="172" font-size="18" fill="#374151">Explains θ, α, ∇J(θ), and the minus sign</text>
+      <text x="28" y="212" font-size="18" fill="#374151">Connects the slide to model training</text>
+      <text x="28" y="252" font-size="18" fill="#374151">Learner understands the idea, not just the words</text>
+    </g>
+  </g>
+</svg>

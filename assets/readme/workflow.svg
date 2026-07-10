@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="260" viewBox="0 0 1200 260" role="img" aria-labelledby="title desc">
+  <title id="title">Teaching workflow</title>
+  <desc id="desc">The workflow goes from context to intuition to example to formal definition to formula breakdown to evaluation.</desc>
+  <rect width="1200" height="260" rx="24" fill="#F8FAFC"/>
+  <g font-family="Segoe UI, Arial, sans-serif">
+    <text x="600" y="45" text-anchor="middle" font-size="28" font-weight="800" fill="#111827">A better teaching path</text>
+    <g transform="translate(45 88)">
+      <rect width="160" height="96" rx="16" fill="#DBEAFE"/>
+      <text x="80" y="42" text-anchor="middle" font-size="19" font-weight="700" fill="#1E3A8A">Context</text>
+      <text x="80" y="68" text-anchor="middle" font-size="14" fill="#1E40AF">Where are we?</text>
+    </g>
+    <g transform="translate(235 88)">
+      <rect width="160" height="96" rx="16" fill="#D1FAE5"/>
+      <text x="80" y="42" text-anchor="middle" font-size="19" font-weight="700" fill="#065F46">Intuition</text>
+      <text x="80" y="68" text-anchor="middle" font-size="14" fill="#047857">What is the idea?</text>
+    </g>
+    <g transform="translate(425 88)">
+      <rect width="160" height="96" rx="16" fill="#FEF3C7"/>
+      <text x="80" y="42" text-anchor="middle" font-size="19" font-weight="700" fill="#92400E">Example</text>
+      <text x="80" y="68" text-anchor="middle" font-size="14" fill="#B45309">Make it concrete</text>
+    </g>
+    <g transform="translate(615 88)">
+      <rect width="160" height="96" rx="16" fill="#EDE9FE"/>
+      <text x="80" y="42" text-anchor="middle" font-size="19" font-weight="700" fill="#5B21B6">Definition</text>
+      <text x="80" y="68" text-anchor="middle" font-size="14" fill="#6D28D9">Now formalize</text>
+    </g>
+    <g transform="translate(805 88)">
+      <rect width="160" height="96" rx="16" fill="#FFE4E6"/>
+      <text x="80" y="42" text-anchor="middle" font-size="19" font-weight="700" fill="#9F1239">Formula</text>
+      <text x="80" y="68" text-anchor="middle" font-size="14" fill="#BE123C">Symbol by symbol</text>
+    </g>
+    <g transform="translate(995 88)">
+      <rect width="160" height="96" rx="16" fill="#CCFBF1"/>
+      <text x="80" y="42" text-anchor="middle" font-size="19" font-weight="700" fill="#115E59">Evaluation</text>
+      <text x="80" y="68" text-anchor="middle" font-size="14" fill="#0F766E">When does it matter?</text>
+    </g>
+    <g fill="none" stroke="#94A3B8" stroke-width="4" stroke-linecap="round">
+      <path d="M210 136H230"/>
+      <path d="M400 136H420"/>
+      <path d="M590 136H610"/>
+      <path d="M780 136H800"/>
+      <path d="M970 136H990"/>
+    </g>
+  </g>
+</svg>

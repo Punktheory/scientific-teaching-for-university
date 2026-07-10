@@ -1,120 +1,262 @@
-# scientific-teaching-for-university
+# 🎓 scientific-teaching-for-university
 
-An educational-psychology-based AI teaching skill for university students. It turns AI from a generic answer machine into a lecture tutor that explains course materials from the learner's point of view.
+<p align="center">
+  <img src="./assets/readme/hero.svg" alt="Scientific Teaching for University hero" width="100%">
+</p>
 
-这个项目的目标很纯粹：让 AI 真正教会你，而不是站在"已经懂了的人"的角度甩术语、甩公式、甩专业黑话。
+<p align="center">
+  <strong>Turn AI from “answer generator” into a professor who actually teaches.</strong><br>
+  <strong>让 AI 不只是回答你，而是真正把知识点教会你。</strong>
+</p>
 
-## Why This Skill Exists
+<p align="center">
+  <a href="#-english-introduction">English</a> ·
+  <a href="#-中文介绍">中文</a> ·
+  <a href="#-quick-start--使用方法">Quick Start</a> ·
+  <a href="#-before--after-example">Before / After</a>
+</p>
 
-很多大学生会用 AI 辅助学习 lecture notes、PPT 和课本知识点，但普通问答式使用经常效果不好。原因通常不是 AI 不会这个知识点，而是它默认从专家视角讲：
+---
 
-- 它知道结论，但不知道你卡在哪里。
-- 它会解释术语，但不会先建立直觉。
-- 它能写公式，但不一定逐个符号拆给你看。
-- 它会回答问题，但不一定解释这页 slide 为什么放在这里。
+## ✨ What Makes This Different?
 
-一个好的教授真正厉害的地方，是能站在学习者的认知起点上教学：先给上下文，再给直觉，再上正式定义，再用例子和评价把概念固定住。
+Most AI explanations fail because they teach from the perspective of someone who already understands the topic.
 
-## What It Does
+This skill forces the AI to teach from the learner's starting point:
 
-This skill asks the AI to teach with a structured pedagogy:
+<p align="center">
+  <img src="./assets/readme/workflow.svg" alt="Teaching workflow" width="100%">
+</p>
 
-- Start with the big picture and context before details.
-- Explain hard ideas with plain language and intuition first.
-- Introduce formal definitions only after the learner has a mental model.
-- Break formulas down symbol by symbol.
-- Pair every key concept with evaluation and examples.
-- Explain why the instructor placed this content, example, formula, or table on the current slide.
-- Move slide by slide, pausing after each page so the learner can digest and ask questions.
+| Normal AI answer | This skill |
+|---|---|
+| Dumps terminology | Starts with context and intuition |
+| Gives the final formula | Explains what the formula is trying to do |
+| Assumes prerequisites | Fills in missing background |
+| Answers one question | Teaches the slide as part of a course |
+| Sounds professional | Makes the learner understand |
 
-## Versions
+---
+
+## 🇬🇧 English Introduction
+
+`scientific-teaching-for-university` is an educational-psychology-based AI teaching skill for university students. It is designed for lecture notes, slides, formulas, abstract concepts, and hard technical courses.
+
+The goal is simple: make AI teach like a good professor.
+
+That means the AI should:
+
+- give the big picture before details;
+- explain intuition before formal definitions;
+- use examples before abstraction becomes too heavy;
+- break math formulas down symbol by symbol;
+- explain why the instructor placed this slide, concept, example, or table here;
+- teach slide by slide instead of rushing through the whole deck.
 
 This repository provides three versions:
 
-| Folder | Language style | Best for |
+| Version | Folder | Best for |
 |---|---|---|
-| `scientific-teaching-for-university` | Chinese explanation with English technical terms | Default version for Chinese-native students studying English lecture notes |
-| `scientific-teaching-for-university-chinversion` | Full Chinese teaching | Chinese students who want the most fluent Chinese learning experience |
-| `scientific-teaching-for-university-englishversion` | Full English teaching | Public / international users |
+| 🌏 Default bilingual | `scientific-teaching-for-university` | Chinese explanations with English technical terms |
+| 🇨🇳 Chinese version | `scientific-teaching-for-university-chinversion` | Full Chinese teaching for Chinese students |
+| 🇬🇧 English version | `scientific-teaching-for-university-englishversion` | Full English teaching for public / international users |
 
-## Four Teaching Modes
+---
 
-| Mode | Use case | Teaching style |
-|---|---|---|
-| Mode 1 Easy | Simple or descriptive courses | Sentence-by-sentence explanation, light examples and concept evaluation |
-| Mode 2 Medium | Courses with some harder concepts | Sentence-by-sentence explanation plus occasional higher-level concept teaching |
-| Mode 3 Hard | Math, CS, technical, or abstract courses | Real teaching: context, intuition, step-by-step breakdown, examples, formula dissection |
-| Mode 4 Deep Dive | When Mode 3 is still too hard | Rebuild one difficult concept from a more basic foundation |
+## 🇨🇳 中文介绍
 
-## Installation
+读大学最崩溃的瞬间之一：打开讲义，满屏公式和术语，问 AI 之后它又甩你一脸“专业黑话”，越问越懵。
 
-Copy the version you want into your Codex skills directory.
+这个项目就是为了解决这个问题。
 
-Windows PowerShell example:
+它把一套基于教育心理学和真实学习经验的教学方法做成 AI skill，让 AI 按一个真正会教学的教授那样讲：
+
+- 先讲大框架和上下文，再进入细节；
+- 难概念先给生活化直觉 / 类比，再给正式定义；
+- 每个概念配“概念评价 + 例子”；
+- 数学公式逐个符号拆开；
+- 解释“老师为什么把这页放在这里”；
+- 讲义一页一页讲，讲完一页停下来等你消化。
+
+核心目的只有一个：通过这个 skill，让 AI **真正教会你**。
+
+---
+
+## 🧠 Four Teaching Modes / 四档教学模式
+
+<p align="center">
+  <img src="./assets/readme/modes.svg" alt="Four teaching modes" width="100%">
+</p>
+
+| Mode | 中文 | When to use | 讲法 |
+|---|---|---|---|
+| Mode 1 Easy | 简单内容 | Descriptive / memory-heavy slides | 逐句讲解 + 轻量例子 |
+| Mode 2 Medium | 重点内容 | Some harder concepts appear | 逐句讲解 + 少量高层概念解释 |
+| Mode 3 Hard | 困难内容 | Math, CS, abstract or technical courses | 真正教学：背景、直觉、定义、例子、公式拆解 |
+| Mode 4 Deep Dive | 追加深挖 | Still confused after Mode 3 | 从更基础处重新搭台阶，一步步推上去 |
+
+---
+
+## 🚀 Quick Start / 使用方法
+
+### 1. Choose a version / 选择版本
+
+Most Chinese-native students studying English lecture notes should start with:
+
+```text
+scientific-teaching-for-university
+```
+
+Use the full Chinese version if you want every explanation in Chinese:
+
+```text
+scientific-teaching-for-university-chinversion
+```
+
+Use the English version for public / international use:
+
+```text
+scientific-teaching-for-university-englishversion
+```
+
+### 2. Use with Codex
+
+Copy the skill folder into your Codex skills directory.
+
+Windows PowerShell:
 
 ```powershell
 Copy-Item -Recurse .\scientific-teaching-for-university "$env:USERPROFILE\.codex\skills\scientific-teaching-for-university"
 ```
 
-macOS / Linux example:
+macOS / Linux:
 
 ```bash
 cp -R ./scientific-teaching-for-university ~/.codex/skills/scientific-teaching-for-university
 ```
 
-To install the Chinese-only or English-only version, replace the folder name with:
-
-- `scientific-teaching-for-university-chinversion`
-- `scientific-teaching-for-university-englishversion`
-
-## Usage
-
-Enable the skill, choose a difficulty, and upload or paste your lecture material.
-
-Example prompts:
+Then invoke it like this:
 
 ```text
-Use scientific-teaching-for-university in hard mode to teach me this machine learning course.
+Use scientific-teaching-for-university in hard mode to teach me this machine learning lecture.
 ```
+
+中文：
 
 ```text
-启用讲义家教，中等难度，教我这门课。
+启用 scientific-teaching-for-university，困难模式，教我这门课。我会一页一页贴 slide。
 ```
+
+### 3. Use with Claude Code / Other AI Tools
+
+If your tool supports custom skills, agents, memories, or reusable instructions:
+
+1. Add the chosen folder as a custom skill / instruction resource.
+2. Point the AI to that folder's `SKILL.md`.
+3. Ask it to follow the mode you want.
+
+Example:
 
 ```text
-Use scientific-teaching-for-university-englishversion in easy mode. I will paste the slides one by one.
+Use the instructions in scientific-teaching-for-university-englishversion/SKILL.md.
+Teach this lecture in hard mode, slide by slide.
 ```
 
-Recommended workflow:
+If your tool does not support skills:
 
-1. Upload the full PPT / lecture notes first if possible, so the AI can understand the course structure.
-2. Paste one slide at a time, preferably as text.
-3. Let the AI explain the page.
-4. Ask follow-up questions or say "more basic please" to trigger deeper scaffolding.
-5. Continue with the next slide.
+1. Open the version's `SKILL.md`.
+2. Paste it into the AI as system / project / custom instructions.
+3. Upload your PPT or paste slides one by one.
 
-## Example Teaching Requirements
+This works with Codex, Claude Code, ChatGPT Projects, Cursor, Windsurf, or any AI system that can follow long custom instructions.
 
-When a slide contains a formula, the AI should not only state what the formula is. It should:
+---
 
-1. Explain what the formula is trying to do intuitively.
-2. Define every symbol.
-3. Read the formula as a plain-language sentence.
-4. Use a minimal numeric example if useful.
-5. Only then treat the formula as a whole.
+## 📚 Recommended Learning Workflow
 
-When a slide contains a hard concept, the AI should:
+```text
+1. Enable the skill + choose difficulty
+2. Upload the whole lecture deck if possible
+3. Ask AI to understand the course structure first
+4. Paste one slide at a time
+5. Let AI explain context, intuition, examples, and formulas
+6. Say "more basic please" to trigger Mode 4
+7. Continue to the next slide
+```
 
-1. Explain where the concept sits in the course.
-2. Give a simple but accurate intuition.
-3. Use a small concrete example.
-4. Introduce the formal definition.
-5. Evaluate when the concept is useful, limited, or easily confused with nearby ideas.
+Best prompt:
 
-## Repository Structure
+```text
+Use scientific-teaching-for-university in hard mode.
+First read the whole lecture note and summarize the course structure.
+Then I will paste slides one by one. Teach each slide from a beginner's perspective.
+```
+
+最佳中文 prompt：
+
+```text
+启用 scientific-teaching-for-university，困难模式。
+请先通读整份讲义，告诉我这门课的大框架。
+然后我会一页一页贴 slide，请你按初学者视角真正教会我。
+```
+
+---
+
+## 🔥 Before / After Example
+
+<p align="center">
+  <img src="./assets/readme/comparison.svg" alt="Before and after teaching example" width="100%">
+</p>
+
+### Slide content
+
+```text
+Gradient descent updates parameters in the opposite direction of the gradient:
+
+θ := θ - α∇J(θ)
+```
+
+### ❌ Without this skill
+
+Gradient descent is an optimization algorithm that updates parameters by subtracting the learning rate times the gradient of the cost function. The gradient points in the direction of steepest ascent, so subtracting it minimizes the function.
+
+### ✅ With this skill
+
+先不要急着看公式。这个 slide 想解决的问题是：
+
+> 模型现在表现不好，我们怎么一点点调整参数，让 loss 变小？
+
+直觉上，你可以把 loss 想象成一座山的高度。你站在山坡上，想往低处走。gradient 就像脚下坡度最陡的上坡方向；既然它指向“上坡最快”，那我们要让 loss 下降，就往反方向走。
+
+公式是：
+
+\[
+\theta := \theta - \alpha \nabla J(\theta)
+\]
+
+逐个符号拆：
+
+- \(\theta\)：模型参数，可以理解成模型里需要调整的旋钮。
+- \(J(\theta)\)：loss / cost function，用来衡量模型现在错得有多厉害。
+- \(\nabla J(\theta)\)：gradient，告诉我们“往哪里调会让 loss 上升最快”。
+- \(\alpha\)：learning rate，表示每一步走多大。
+- 减号：因为 gradient 指向上升方向，所以我们要反着走，才能下降。
+
+老师为什么把这页放这里？
+
+因为在学训练模型时，前面通常已经定义了 loss。下一步自然就是问：有了 loss 以后，怎么把它变小？Gradient descent 就是连接“定义目标”和“训练模型”的桥。
+
+---
+
+## 🧩 Repository Structure
 
 ```text
 .
+├── assets/readme/
+│   ├── hero.svg
+│   ├── workflow.svg
+│   ├── modes.svg
+│   └── comparison.svg
 ├── scientific-teaching-for-university/
 │   ├── SKILL.md
 │   ├── agents/openai.yaml
@@ -129,8 +271,18 @@ When a slide contains a hard concept, the AI should:
     └── references/pedagogy.md
 ```
 
-## Author's Note
+---
 
-这个 skill 来自作者长期使用 AI 学习、研究教育心理学、观察好教授和差教授教学差异后的总结。核心结论很简单：教得好不是把知识倒出来，而是给学习者搭台阶。
+## 🌟 Why It Matters
+
+Good teaching is not dumping knowledge.
+
+Good teaching means building stairs:
+
+```text
+context → intuition → example → definition → formula → evaluation → practice
+```
+
+This skill packages that teaching method into reusable AI instructions, so more students can use AI for serious learning instead of shallow Q&A.
 
 希望它能帮助更多大学生更快、更系统地用 AI 学会知识点。
