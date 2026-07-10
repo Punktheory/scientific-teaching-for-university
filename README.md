@@ -11,11 +11,10 @@
 
 <p align="center">
   <a href="#-english-guide">English Guide</a> ·
-  <a href="#-quick-start">English Quick Start</a> ·
   <a href="#-中文指南">中文指南</a> ·
-  <a href="#-快速使用">中文快速使用</a> ·
-  <a href="#-version-selection--版本选择">Versions</a> ·
-  <a href="#-license--协议">License</a>
+  <a href="#-quick-start">Quick Start</a> ·
+  <a href="#-快速使用">快速使用</a> ·
+  <a href="#-version-selection--版本选择">Versions</a>
 </p>
 
 ---
@@ -125,33 +124,28 @@ Then I will paste slides one by one. Teach each slide from a beginner's perspect
   <img src="./assets/readme/comparison.svg" alt="Before and after teaching example" width="100%">
 </p>
 
-### Slide content
-
-```text
-Gradient descent updates parameters in the opposite direction of the gradient:
-
-θ := θ - α∇J(θ)
-```
-
 <table>
   <tr>
-    <td width="50%" valign="top">
+    <td colspan="2" align="center" bgcolor="#F8FAFC">
+      <h3>Slide content</h3>
+      <p><strong>Gradient descent updates parameters in the opposite direction of the gradient:</strong></p>
+      <p><code>θ := θ - α∇J(θ)</code></p>
+    </td>
+  </tr>
+  <tr>
+    <td width="42%" valign="top" bgcolor="#FFF5F5">
       <h3>❌ Without this skill</h3>
+      <p><strong>Compressed answer:</strong></p>
       <p>Gradient descent is an optimization algorithm that updates parameters by subtracting the learning rate times the gradient of the cost function.</p>
       <p>The gradient points in the direction of steepest ascent, so subtracting it minimizes the function.</p>
-      <p><strong>Problem:</strong> correct, but compressed. It assumes the learner already knows what gradient, cost function, parameter update, and steepest ascent mean.</p>
+      <p><strong>Problem:</strong> correct, but it assumes the learner already knows gradient, cost function, parameter update, and steepest ascent.</p>
     </td>
-    <td width="50%" valign="top">
+    <td width="58%" valign="top" bgcolor="#F0FDF4">
       <h3>✅ With this skill</h3>
-      <p><strong>1. Start from the learning problem:</strong></p>
-      <blockquote>The model is not good enough yet. How do we adjust its parameters step by step so the loss becomes smaller?</blockquote>
-      <p><strong>2. Give intuition:</strong></p>
-      <p>Imagine the loss as the height of a mountain. The gradient is the steepest uphill direction. To reduce loss, we move the opposite way.</p>
-      <p><strong>3. Decode the formula:</strong></p>
-      <p><code>θ := θ - α∇J(θ)</code></p>
-      <p><code>θ</code> is the parameter, <code>α</code> is step size, <code>∇J(θ)</code> is the uphill direction, and the minus sign means “walk downhill.”</p>
-      <p><strong>4. Explain why this slide is here:</strong></p>
-      <p>After defining loss, the course naturally asks how to make that loss smaller. Gradient descent is the bridge from objective to training.</p>
+      <p><strong>1. Learning problem</strong><br>The model is not good enough yet. How do we adjust its parameters step by step so the loss becomes smaller?</p>
+      <p><strong>2. Intuition</strong><br>Imagine loss as the height of a mountain. The gradient points uphill, so moving in the opposite direction walks downhill.</p>
+      <p><strong>3. Formula decoding</strong><br><code>θ</code> is the parameter, <code>α</code> is the step size, <code>∇J(θ)</code> is the uphill direction, and the minus sign means “go downhill.”</p>
+      <p><strong>4. Course context</strong><br>After defining loss, the course naturally asks how to make that loss smaller. Gradient descent connects the objective to model training.</p>
     </td>
   </tr>
 </table>
@@ -263,50 +257,43 @@ Claude Code 或其他支持 custom instructions 的 AI 工具：让 AI 使用下
   <img src="./assets/readme/comparison.svg" alt="Before and after teaching example" width="100%">
 </p>
 
-### Slide 内容
-
-```text
-Gradient descent updates parameters in the opposite direction of the gradient:
-
-θ := θ - α∇J(θ)
-```
-
 <table>
   <tr>
-    <td width="50%" valign="top">
+    <td colspan="2" align="center" bgcolor="#F8FAFC">
+      <h3>Slide 内容</h3>
+      <p><strong>Gradient descent updates parameters in the opposite direction of the gradient:</strong></p>
+      <p><code>θ := θ - α∇J(θ)</code></p>
+    </td>
+  </tr>
+  <tr>
+    <td width="42%" valign="top" bgcolor="#FFF5F5">
       <h3>❌ 不使用这个 skill</h3>
+      <p><strong>压缩式回答：</strong></p>
       <p>Gradient descent is an optimization algorithm that updates parameters by subtracting the learning rate times the gradient of the cost function.</p>
       <p>The gradient points in the direction of steepest ascent, so subtracting it minimizes the function.</p>
-      <p><strong>问题：</strong>这段话是对的，但太压缩了。它默认你已经知道 gradient、cost function、parameter update、steepest ascent 是什么。</p>
+      <p><strong>问题：</strong>这段话是对的，但默认你已经知道 gradient、cost function、parameter update、steepest ascent 是什么。</p>
     </td>
-    <td width="50%" valign="top">
+    <td width="58%" valign="top" bgcolor="#F0FDF4">
       <h3>✅ 使用这个 skill</h3>
-      <p><strong>1. 先从学习问题出发：</strong></p>
-      <blockquote>模型现在表现不好，我们怎么一点点调整参数，让 loss 变小？</blockquote>
-      <p><strong>2. 给直觉：</strong></p>
-      <p>把 loss 想象成一座山的高度。gradient 是最陡的上坡方向。我们想让 loss 下降，所以要往它的反方向走。</p>
-      <p><strong>3. 拆公式：</strong></p>
-      <p><code>θ := θ - α∇J(θ)</code></p>
-      <p><code>θ</code> 是参数，<code>α</code> 是每一步走多大，<code>∇J(θ)</code> 是上坡方向，减号表示“往下坡走”。</p>
-      <p><strong>4. 解释为什么这页放这里：</strong></p>
-      <p>课程前面定义了 loss，下一步自然要问怎么让 loss 变小。Gradient descent 就是从“定义目标”走向“训练模型”的桥。</p>
+      <p><strong>1. 学习问题</strong><br>模型现在表现不好，我们怎么一点点调整参数，让 loss 变小？</p>
+      <p><strong>2. 直觉理解</strong><br>把 loss 想象成一座山的高度。gradient 指向最陡的上坡方向，所以我们要往反方向走。</p>
+      <p><strong>3. 公式拆解</strong><br><code>θ</code> 是参数，<code>α</code> 是每一步走多大，<code>∇J(θ)</code> 是上坡方向，减号表示“往下坡走”。</p>
+      <p><strong>4. 为什么这页放这里</strong><br>课程前面定义了 loss，下一步自然要问怎么让 loss 变小。Gradient descent 把“定义目标”和“训练模型”连起来。</p>
     </td>
   </tr>
 </table>
 
-## 🌟 Why It Matters / 为什么这件事重要？
+## Why It Matters
 
-Good teaching is not dumping knowledge. 好的教学不是把知识倒出来。
+Good teaching is not dumping knowledge.
 
-Good teaching means building stairs. 好的教学是在给学习者搭台阶：
+Good teaching means building stairs:
 
 ```text
-context / 上下文 → intuition / 直觉 → example / 例子 → definition / 定义 → formula / 公式 → evaluation / 评价 → practice / 练习
+context → intuition → example → definition → formula → evaluation → practice
 ```
 
 This skill packages that teaching method into reusable AI instructions, so more students can use AI for serious learning instead of shallow Q&A.
-
-这个 skill 把这套教学方法封装成可复用的 AI 指令，让更多学生能用 AI 进行真正有效的学习，而不是停留在浅层问答。
 
 ---
 
@@ -320,11 +307,9 @@ This skill packages that teaching method into reusable AI instructions, so more 
 
 ---
 
-## 📄 License / 协议
+## License
 
 This repository is released under the MIT License.
-
-本仓库使用 MIT 协议开源。
 
 See [LICENSE](./LICENSE) for details.
 
