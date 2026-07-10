@@ -1,48 +1,84 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="520" viewBox="0 0 1200 520" role="img" aria-labelledby="title desc">
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="560" viewBox="0 0 1200 560" role="img" aria-labelledby="title desc">
   <title id="title">Before and after teaching example</title>
   <desc id="desc">A polished comparison between a compressed AI answer and a scaffolded teaching explanation.</desc>
   <defs>
     <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0" stop-color="#F8FAFC"/>
-      <stop offset="1" stop-color="#E0F2FE"/>
+      <stop offset="0.55" stop-color="#EEF2FF"/>
+      <stop offset="1" stop-color="#ECFEFF"/>
     </linearGradient>
-    <linearGradient id="good" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#ECFDF5"/>
+    <linearGradient id="badHead" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#FEE2E2"/>
+      <stop offset="1" stop-color="#FFE4E6"/>
+    </linearGradient>
+    <linearGradient id="goodHead" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#D1FAE5"/>
       <stop offset="1" stop-color="#DBEAFE"/>
     </linearGradient>
-    <filter id="shadow" x="-10%" y="-10%" width="120%" height="130%">
-      <feDropShadow dx="0" dy="12" stdDeviation="12" flood-color="#0F172A" flood-opacity="0.12"/>
+    <linearGradient id="goodBody" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#F0FDF4"/>
+      <stop offset="1" stop-color="#EFF6FF"/>
+    </linearGradient>
+    <filter id="shadow" x="-12%" y="-12%" width="124%" height="140%">
+      <feDropShadow dx="0" dy="16" stdDeviation="16" flood-color="#0F172A" flood-opacity="0.14"/>
     </filter>
   </defs>
-  <rect width="1200" height="520" rx="26" fill="url(#bg)"/>
-  <text x="600" y="46" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="31" font-weight="800" fill="#0F172A">Gradient Descent: Before vs After</text>
+
+  <rect width="1200" height="560" rx="28" fill="url(#bg)"/>
+  <text x="600" y="48" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="32" font-weight="800" fill="#0F172A">Gradient Descent: Before vs After</text>
   <text x="600" y="78" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="17" fill="#475569">Same slide. Different teaching quality.</text>
 
-  <g transform="translate(60 115)" filter="url(#shadow)">
-    <rect width="500" height="345" rx="20" fill="#FFFFFF" stroke="#FCA5A5" stroke-width="3"/>
-    <rect width="500" height="62" rx="20" fill="#FEF2F2"/>
-    <text x="28" y="40" font-family="Segoe UI, Arial, sans-serif" font-size="25" font-weight="800" fill="#991B1B">❌ Without this skill</text>
-    <text x="30" y="105" font-family="Segoe UI, Arial, sans-serif" font-size="17" fill="#334155">Gradient descent is an optimization</text>
-    <text x="30" y="132" font-family="Segoe UI, Arial, sans-serif" font-size="17" fill="#334155">algorithm that updates parameters by</text>
-    <text x="30" y="159" font-family="Segoe UI, Arial, sans-serif" font-size="17" fill="#334155">subtracting the learning rate times the</text>
-    <text x="30" y="186" font-family="Segoe UI, Arial, sans-serif" font-size="17" fill="#334155">gradient of the cost function.</text>
-    <line x1="30" y1="218" x2="470" y2="218" stroke="#FECACA" stroke-width="2"/>
-    <text x="30" y="252" font-family="Segoe UI, Arial, sans-serif" font-size="17" font-weight="700" fill="#991B1B">What is missing?</text>
-    <text x="30" y="282" font-family="Segoe UI, Arial, sans-serif" font-size="16" fill="#475569">No intuition. No symbol breakdown.</text>
-    <text x="30" y="309" font-family="Segoe UI, Arial, sans-serif" font-size="16" fill="#475569">No course context. Too compressed.</text>
+  <g transform="translate(46 112)" filter="url(#shadow)">
+    <rect width="520" height="360" rx="24" fill="#FFFFFF" stroke="#FCA5A5" stroke-width="3"/>
+    <rect width="520" height="70" rx="24" fill="url(#badHead)"/>
+    <text x="30" y="44" font-family="Segoe UI, Arial, sans-serif" font-size="26" font-weight="800" fill="#991B1B">❌ Without this skill</text>
+
+    <text x="30" y="112" font-family="Segoe UI, Arial, sans-serif" font-size="17" fill="#334155">Gradient descent is an optimization algorithm</text>
+    <text x="30" y="138" font-family="Segoe UI, Arial, sans-serif" font-size="17" fill="#334155">that updates parameters by subtracting the</text>
+    <text x="30" y="164" font-family="Segoe UI, Arial, sans-serif" font-size="17" fill="#334155">learning rate times the gradient of the cost</text>
+    <text x="30" y="190" font-family="Segoe UI, Arial, sans-serif" font-size="17" fill="#334155">function.</text>
+
+    <rect x="30" y="224" width="460" height="102" rx="18" fill="#FFF1F2" stroke="#FDA4AF"/>
+    <text x="52" y="256" font-family="Segoe UI, Arial, sans-serif" font-size="17" font-weight="800" fill="#9F1239">What the learner sees</text>
+    <text x="52" y="283" font-family="Segoe UI, Arial, sans-serif" font-size="16" fill="#475569">Correct, but compressed.</text>
+    <text x="52" y="309" font-family="Segoe UI, Arial, sans-serif" font-size="16" fill="#475569">No intuition. No symbol breakdown. No context.</text>
   </g>
 
-  <g transform="translate(640 115)" filter="url(#shadow)">
-    <rect width="500" height="345" rx="20" fill="url(#good)" stroke="#86EFAC" stroke-width="3"/>
-    <rect width="500" height="62" rx="20" fill="#D1FAE5"/>
-    <text x="28" y="40" font-family="Segoe UI, Arial, sans-serif" font-size="25" font-weight="800" fill="#166534">✅ With this skill</text>
-    <text x="30" y="101" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="800" fill="#065F46">1. Learning problem</text>
-    <text x="52" y="128" font-family="Segoe UI, Arial, sans-serif" font-size="16" fill="#334155">How do we adjust parameters so loss gets smaller?</text>
-    <text x="30" y="166" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="800" fill="#1D4ED8">2. Intuition</text>
-    <text x="52" y="193" font-family="Segoe UI, Arial, sans-serif" font-size="16" fill="#334155">Loss is mountain height; gradient points uphill.</text>
-    <text x="30" y="231" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="800" fill="#92400E">3. Formula decoding</text>
-    <text x="52" y="260" font-family="Consolas, monospace" font-size="18" fill="#0F172A">θ := θ - α∇J(θ)</text>
-    <text x="52" y="291" font-family="Segoe UI, Arial, sans-serif" font-size="16" fill="#334155">θ = parameter, α = step size, minus = downhill.</text>
-    <text x="30" y="329" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="800" fill="#7C2D12">4. Why this slide?</text>
+  <g transform="translate(634 112)" filter="url(#shadow)">
+    <rect width="520" height="360" rx="24" fill="#FFFFFF" stroke="#86EFAC" stroke-width="3"/>
+    <rect width="520" height="70" rx="24" fill="url(#goodHead)"/>
+    <text x="30" y="44" font-family="Segoe UI, Arial, sans-serif" font-size="26" font-weight="800" fill="#166534">✅ With this skill</text>
+
+    <rect x="24" y="94" width="472" height="228" rx="20" fill="url(#goodBody)" stroke="#C7D2FE"/>
+
+    <g font-family="Segoe UI, Arial, sans-serif">
+      <rect x="42" y="112" width="108" height="32" rx="16" fill="#DBEAFE"/>
+      <text x="96" y="134" text-anchor="middle" font-size="15" font-weight="800" fill="#1D4ED8">1. Problem</text>
+      <text x="42" y="167" font-size="16" fill="#334155">How do we make loss smaller step by step?</text>
+
+      <rect x="42" y="193" width="108" height="32" rx="16" fill="#D1FAE5"/>
+      <text x="96" y="215" text-anchor="middle" font-size="15" font-weight="800" fill="#047857">2. Intuition</text>
+      <text x="42" y="248" font-size="16" fill="#334155">Loss is mountain height; gradient points uphill.</text>
+
+      <rect x="42" y="274" width="112" height="32" rx="16" fill="#FEF3C7"/>
+      <text x="98" y="296" text-anchor="middle" font-size="15" font-weight="800" fill="#B45309">3. Formula</text>
+      <text x="176" y="296" font-family="Consolas, monospace" font-size="18" fill="#0F172A">θ := θ - α∇J(θ)</text>
+      <text x="176" y="322" font-size="15" fill="#475569">θ = parameter, α = step size, minus = downhill</text>
+    </g>
+
+    <rect x="24" y="332" width="472" height="0" fill="none"/>
+    <text x="30" y="346" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="800" fill="#7C2D12">4. Why this slide?</text>
+    <text x="30" y="372" font-family="Segoe UI, Arial, sans-serif" font-size="15" fill="#334155">It connects the loss objective to the actual update rule.</text>
+  </g>
+
+  <g fill="none" stroke="#94A3B8" stroke-width="4" stroke-linecap="round">
+    <path d="M574 184H622"/>
+    <path d="M574 220H622"/>
+    <path d="M574 256H622"/>
+  </g>
+  <g font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700" fill="#64748B">
+    <text x="600" y="178" text-anchor="middle">move from answer</text>
+    <text x="600" y="214" text-anchor="middle">to teaching</text>
+    <text x="600" y="250" text-anchor="middle">with structure</text>
   </g>
 </svg>
